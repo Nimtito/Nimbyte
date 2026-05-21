@@ -1,11 +1,11 @@
-function ServicesPage() {
+function AboutPage() {
   return (
     <div className="p-10 text-center">
       <h1 className="text-5xl font-bold">
-        Services Page
+        About Nimbyte
       </h1>
     </div>
   )
 }
 
-export default ServicesPage
+export default AboutPage
