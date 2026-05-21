@@ -3,11 +3,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import MainLayout from "./Layout/MainLayout"
 
-import Home from "./pages/Home"
-import ServicesPage from "./pages/ServicesPage"
-import PortfolioPage from "./pages/PortfolioPage"
-import ContactPage from "./pages/ContactPage"
-import AboutPage from "./pages/AboutPage"
+import Home from "./Pages/Home"
+import ServicesPage from "./Pages/ServicesPage"
+import PortfolioPage from "./Pages/PortfolioPage"
+import ContactPage from "./Pages/ContactPage"
+import AboutPage from "./Pages/AboutPage"
 
 function App() {
   return (
