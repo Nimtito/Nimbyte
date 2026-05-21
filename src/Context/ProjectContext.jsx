@@ -6,19 +6,28 @@ export const ProjectContext = createContext()
 
 function ProjectProvider({ children }) {
 
-  // Initial state
   const initialState = [
+
     {
       id: 1,
-      title: "Restaurant Website"
+      title: "Restaurant Website",
+      status: "In Progress"
     },
+
     {
       id: 2,
-      title: "E-commerce Store"
+      title: "E-commerce Store",
+      status: "Completed"
+    },
+
+    {
+      id: 3,
+      title: "Booking System",
+      status: "Pending"
     }
+
   ]
 
-  // useReducer
   const [projects, dispatch] = useReducer(
     projectReducer,
     initialState

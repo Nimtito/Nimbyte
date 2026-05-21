@@ -1,23 +1,36 @@
 import { createContext, useState } from "react"
 
-// Create Context
 export const AuthContext = createContext()
 
 function AuthProvider({ children }) {
 
-  // User state
   const [user, setUser] = useState(null)
 
-  // Login function
-  const login = () => {
-    setUser({
-      name: "Nimrod"
-    })
+  const [darkMode, setDarkMode] = useState(false)
+
+  // Fake login
+  const login = (email, password) => {
+
+    if (email && password) {
+
+      setUser({
+        name: "Nimrod",
+        email
+      })
+
+    }
   }
 
-  // Logout function
+  // Logout
   const logout = () => {
     setUser(null)
+  }
+
+  // Dark Mode Toggle
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode)
+
+    document.documentElement.classList.toggle("dark")
   }
 
   return (
@@ -25,7 +38,9 @@ function AuthProvider({ children }) {
       value={{
         user,
         login,
-        logout
+        logout,
+        darkMode,
+        toggleDarkMode
       }}
     >
       {children}

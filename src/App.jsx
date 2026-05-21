@@ -12,7 +12,8 @@ import ProjectDetails from "./Pages/ProjectDetails"
 
 function App() {
   return (
-    <div>
+     <div className="min-h-screen bg-gray-100 text-black dark:bg-gray-900 dark:text-white transition-all duration-300">
+
       <Navbar />
 
       <Routes>

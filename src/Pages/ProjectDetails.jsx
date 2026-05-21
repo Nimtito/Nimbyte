@@ -2,18 +2,19 @@ import { useParams } from "react-router-dom"
 
 function ProjectDetails() {
 
-  // Get route parameter
   const { id } = useParams()
 
   return (
-    <div className="p-10 text-center">
+    <div className="py-20 text-center">
 
-      <h1 className="text-4xl font-bold">
+      <h1 className="text-5xl font-bold mb-6">
         Project Details
       </h1>
 
-      <p className="mt-4 text-xl">
-        Project ID: {id}
+      <p className="text-2xl text-blue-600">
+
+        Viewing Project ID: {id}
+
       </p>
 
     </div>
