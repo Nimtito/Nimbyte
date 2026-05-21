@@ -1,4 +1,4 @@
-import heroImage from "../../assets/images/hero-image.png"
+import HeroTech  from "../assets/HeroTech";
 
 function Hero() {
   return (
@@ -24,14 +24,10 @@ function Hero() {
       </div>
 
       <div>
-        <img
-          src={heroImage}
-          alt="Hero"
-          className="w-full"
-        />
+        <img src={HeroTech} alt="Hero" className="w-full" />
       </div>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

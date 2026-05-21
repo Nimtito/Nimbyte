@@ -1,27 +1,46 @@
+import { Routes, Route } from "react-router-dom"
 
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-
-import MainLayout from "./Layout/MainLayout"
+import Navbar from "./Components/Navbar"
+import Footer from "./Components/Footer"
+import ProtectedRoute from "./Components/ProtectedRoute"
 
 import Home from "./Pages/Home"
-import ServicesPage from "./Pages/ServicesPage"
-import PortfolioPage from "./Pages/PortfolioPage"
-import ContactPage from "./Pages/ContactPage"
-import AboutPage from "./Pages/AboutPage"
+import Services from "./Pages/Services"
+import Dashboard from "./Pages/Dashboard"
+import Login from "./Pages/Login"
+import ProjectDetails from "./Pages/ProjectDetails"
 
 function App() {
   return (
-    <BrowserRouter>
-      <MainLayout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/portfolio" element={<PortfolioPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/about" element={<AboutPage />} />
-        </Routes>
-      </MainLayout>
-    </BrowserRouter>
+    <div>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+        <Route path="/services" element={<Services />} />
+
+        <Route path="/login" element={<Login />} />
+
+        {/* Protected Route */}
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Dynamic Route */}
+        <Route
+          path="/project/:id"
+          element={<ProjectDetails />}
+        />
+      </Routes>
+
+      <Footer />
+    </div>
   )
 }
 
