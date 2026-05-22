@@ -48,4 +48,4 @@ function AuthProvider({ children }) {
   )
 }
 
-export { AuthProvider }
+export default AuthProvider 
